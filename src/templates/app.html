@@ -1,0 +1,58 @@
+{% extends "layout.html"%}
+{% block content %}
+<div class="container col-12">
+    <br>
+    <div class="row text-center">
+    <h1>App</h1>
+    </div>
+    <div class="row">
+        <div class="col-3">
+            <h2>¿Como Funciona?</h2>
+            <br>
+            <h2>¿Que desea ver?</h2>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Arborización</option>
+                <option value="1">Mantenimiento</option>
+                <option value="2">Siembra</option>
+            </select>
+            <br>
+            <h2>Filtrar por:</h2>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Comuna</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+            </select>
+            <br>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Especie (Nombre Comun)</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+            <br>
+            <select class="form-select" aria-label="Default select example">
+                <option selected>Estado Sanitario</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+            </select>
+
+        </div>
+        
+        
+        <div class="col-6 mx-auto d-block">
+                <img src="static/images/mapibague.png">
+        </div>
+        <div class="col-3">
+            <div class="row">
+                <img src="static/images/bar1.png">
+            </div>
+            <br>
+            <div class="row">
+                <img src="static/images/bar2.png">
+            </div>
+        </div>
+    </div>    
+</div>
+{% endblock %}
