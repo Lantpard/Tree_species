@@ -54,3 +54,25 @@ li a:hover:not(.active) {
     border: 1px rgb(9, 44, 97) solid;
     
 }
+
+.foto{
+    border-radius: 50%;
+}
+
+.clip{
+    clip-path: inset(0px 15px);
+}
+
+.clip > img{
+    border-radius: 50px;
+}
+
+.imgRedonda {
+    width:100px;
+    height:100px;
+    border-radius:50%;
+}
+
+.blanco {
+    filter: invert(1) sepia(1) hue-rotate(180deg) saturate(1000%);
+}

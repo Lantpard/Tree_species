@@ -1,4 +1,59 @@
-{% extends "layout.html"%}
-{% block content %}
-    <h1>Inicio</h1>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tree Species</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{{url_for('static',filename='css/main.css')}}">
+</head>
+<body>
+    <div class="container col-12">
+        <br>
+        <br>
+        <div class="row text-center">
+            <h1>Ibague's Tree Species</h1>
+        </div>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-1">
+    
+            </div>
+            <div class="col-2 text-center">
+                <a href="{{url_for('about')}}">
+                    <img class="center blanco" src="static/images/info.png" height="100" >
+                </a>
+                <h3>Acerca de</h3>
+            </div>
+            <div class="col-2 text-center">
+                <a href="{{url_for('dash')}}">
+                    <img class="center blanco" src="static/images/app.png" height="100" >
+                </a>
+                <h3>App</h3>
+            </div>
+            <div class="col-2 text-center">
+                <a href="{{url_for('trees')}}">
+                <img class="center blanco" src="static/images/arbol2.png" height="120" >
+                </a>
+                <h3>Árboles en Ibagué</h3>
+            </div>
+            <div class="col-2 text-center">
+                <a href="{{url_for('team')}}">
+                    <img class="center blanco" src="static/images/equipo.png" height="100" >
+                </a>
+                <h3>Equipo</h3>
+            </div>
+            <div class="col-2 text-center">
+                <a href="{{url_for('contact')}}">
+                    <img class="center blanco" src="static/images/mail.png" height="100" >
+                </a>
+                <h3>Contáctanos</h3>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
