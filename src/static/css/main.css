@@ -1,19 +1,25 @@
 body{
-    background-color: #53bf9efb;
+    background-color: #154335fb;
 }
 h1{
     color: #fff;
     font-size: 2.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150;
 }
 
 h2{
     color: #fff;
     font-size: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150;
 }
 
 h3{
     color: #fff;
     font-size: 1.2em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 150;
 }
 
 p{
@@ -75,4 +81,17 @@ li a:hover:not(.active) {
 
 .blanco {
     filter: invert(1) sepia(1) hue-rotate(180deg) saturate(1000%);
+}
+
+.nav{
+    background-color: black;
+}
+
+.imgSize {
+    width:20%;
+    height:20%;
+}
+
+.textblanco{
+        color: white;    
 }
