@@ -95,3 +95,7 @@ li a:hover:not(.active) {
 .textblanco{
         color: white;    
 }
+
+.osc{
+    opacity: 0.2;
+}
