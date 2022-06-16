@@ -14,65 +14,55 @@
 {% extends "layout.html"%}
 {% block content %}
     
-    <div class="container col-12">
-        <br>
-        <div class="row text-center">
+    <div class="contenedor6">
+        <header>
             <h1>Contactanos</h1>
-        </div>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-2">
+        </header>
 
-            </div>
-            <div class="col-3">
-                <div class="row">
-                    <div class="d-inline-flex">
-                        <img class="mx-2"  src="static/images/face.webp" height="30">
-                        <a class="text-center textblanco" href="https://es-la.facebook.com/alcaldiaibague/" target="_blank">Alcaldia de ibagué</a>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="d-inline-flex">
-                        <img class="mx-2"  src="static/images/twitter.webp" height="30">
-                        <a class="text-center textblanco" href="https://twitter.com/Alcaldiaibague" target="_blank">Alcaldia de ibagué</a>
-                    </div>
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="d-inline-flex">
-                        <img class="mx-2"  src="static/images/insta.webp" height="30">
-                        <a class="text-center textblanco" href="https://www.instagram.com/alcaldiadeibague/" target="_blank">Alcaldia de ibagué</a>
-                    </div>    
-                </div>
-                <br>
-                <br>
-                <div class="row">
-                    <div class="d-inline-flex">
-                        <img class="mx-2"  src="static/images/alcaldia.png" height="40">
-                        <a class="text-center textblanco" href="https://ibague.gov.co/portal/index.php" target="_blank">Alcaldia de ibagué</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-2">
+        <div class="info">
 
+            <div class="facebook">
+                <a class="text-center textblanco" href="https://es-la.facebook.com/alcaldiaibague/" target="_blank">
+                    <img class="mx-2"  src="static/images/face.webp" height="30">
+                    Alcaldia de ibagué
+                </a>
             </div>
-            <div class="col-4">
-                <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label textblanco">Correo Electronico</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                  </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlTextarea1" class="form-label textblanco">Observacion</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
-                  </div>
-                  <button type="button" class="btn btn-light btn-outline-primary">Enviar</button>
+            
+            <div class="twitter">
+                <a class="text-center textblanco" href="https://twitter.com/Alcaldiaibague" target="_blank">
+                    <img class="mx-2"  src="static/images/twitter.webp" height="30">
+                    Alcaldia de ibagué
+                </a>
             </div>
+
+            <div class="instagram">
+                <a class="text-center textblanco" href="https://www.instagram.com/alcaldiadeibague/" target="_blank">
+                    <img class="mx-2"  src="static/images/insta.webp" height="30">
+                    Alcaldia de ibagué
+                </a>
+            </div> 
+
+            <div class="web">
+                <a class="text-center textblanco" href="https://ibague.gov.co/portal/index.php" target="_blank">
+                    <img class="mx-2"  src="static/images/alcaldia.png" height="40">
+                    Alcaldia de ibagué
+                </a>
+            </div>
+        </div>    
+            
+        <div class="formulario">
+            <div class="correo">
+                <label for="exampleFormControlInput1" class="form-label textblanco">Correo Electronico</label>
+                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+            </div>
+            <div class="Observacion">
+                <label for="exampleFormControlTextarea1" class="form-label textblanco">Observacion</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+            </div>
+                  
+            <button type="button" class="btn btn-light btn-outline-primary">Enviar</button>
         </div>
+        
     </div>
     
 {% endblock %}

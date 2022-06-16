@@ -12,8 +12,7 @@ body{
 /*estilos index*/
 
 .contenedor {
-    width: 90%;
-    max-width: 1000px;
+    width: 95%;
     height: 100%;
     margin: 10px auto;
     display:grid;
@@ -75,9 +74,8 @@ body{
 
 /*estilos about*/
 .contenedor2 {
-    width: 90%;
-    max-width: 1000px;
-    height: 50%;
+    width: 95%;
+    height: 100%;
     margin: 10px auto;
     display:grid;
     grid-gap: 10px;
@@ -88,16 +86,21 @@ body{
 .contenedor2 header {
     height: 150px;
     grid-column: span 3;
-    text-align: center;
     display: flex;
     align-items: center;
-    justify-content: center;
+    margin: 10px;
 }
 
 .contenedor2 .descripcion {
-    height: 150px;
+    height: 400px;
     grid-column: span 3;
+    grid-row: 2;
     grid-row: span 2;
+    margin: 10px;
+}
+
+.descripcion > div{
+    padding: 1em;
 }
 
 .correlation {
@@ -118,7 +121,7 @@ body{
 
 .contenedor3 {
     width: 90%;
-    height: 50%;
+    height: 100%;
     margin: 20px auto;
     display:grid;
     grid-gap: 10px;
@@ -127,7 +130,7 @@ body{
 }
 
 .contenedor3 header {
-    height: 100px;
+    height: 150px;
     grid-column-start: 1;
     grid-column-end: -1;
     text-align: center;
@@ -137,16 +140,18 @@ body{
 }
 
 .contenedor3 .filtros {
-
+    grid-row: 2;
     grid-column: span 3;
-    grid-row: span 3;
+    grid-row: span 4;
 }
 
 .map {
     grid-column: 5;
+    grid-row: 2;
     grid-row: span 4;
     align-self: center;
     text-align: center;
+    background-color: aqua;
 }
 
 .dash1 {
@@ -215,7 +220,215 @@ body{
     text-align: center;
 }
 
-/**/
+/*estilos arboles*/
+
+.contenedor4 {
+    width: 90%;
+    height: 100%;
+    margin: 20px auto;
+    display:grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+}
+
+.contenedor4 header {
+    height: 150px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor4 .main2 {
+    grid-row: 2;
+    grid-column: span 2;
+    grid-row: span 3;
+    padding: 10px;
+}
+
+.dash3 {
+    grid-column: 4;
+    grid-row: 2 ;
+    align-self: center;
+    text-align: center;
+}
+
+.dash4 {
+    grid-column: 4;
+    grid-row: 4;
+    align-self: center;
+    text-align: center;
+}
+
+/*estilos equipo*/
+
+.contenedor5 {
+    width: 95%;
+    height: 100%;
+    margin: 10px auto;
+    display:grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: repeat(2,auto);
+}
+
+.contenedor5 header {
+    height: 150px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor5 main {
+    height: 400px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.contenido5 {    
+    display:grid;
+    grid-template-columns: repeat(6,1fr);
+    gap: 1em;
+}    
+
+.contenido > div{
+    padding: 1em;
+}
+
+.foto1 {
+    align-self: center;
+    text-align: center;
+}
+
+.foto2 {
+    align-self: center;
+    text-align: center;
+}
+
+.foto3 {
+    align-self: center;
+    text-align: center;
+}
+
+.foto4 {
+    align-self: center;
+    text-align: center;
+}
+
+.foto5 {
+    align-self: center;
+    text-align: center;
+}
+
+.foto6 {
+    align-self: center;
+    text-align: center;
+}
+
+/*estilos contacto*/
+
+.contenedor6 {
+    width: 90%;
+    height: 100%;
+    margin: 20px auto;
+    display:grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(5,1fr);
+}
+
+.contenedor6 header {
+    height: 150px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor6 .info {
+    grid-row: 2;
+    grid-column: span 3;
+    grid-row: span 4;
+}
+
+.formulario {
+    grid-row: 2;
+    grid-column: 6;
+    grid-column-start: 6;
+    grid-column-end: -1;
+}
+
+.info {
+    display:grid;
+    grid-template-rows: repeat(4,1fr);
+}    
+
+.info > div{
+    padding: 1em;
+}
+
+.formulario {
+    display:grid;
+    grid-template-rows: repeat(5,1fr);
+}    
+
+.formulario > div{
+    padding: 1em;
+}
+
+.facebook {
+    grid-row: 1;
+    align-self: center;
+    text-align: center;
+}
+
+.twitter {
+    grid-row: 2;
+    align-self: center;
+    text-align: center;
+}
+
+.instagram {
+    grid-row: 3;
+    align-self: center;
+    text-align: center;
+}
+
+.web {
+    grid-row: 4;
+    align-self: center;
+    text-align: center;
+}
+
+.correo {
+    grid-row: 1;
+    align-self: center;
+}
+
+.Observacion {
+    grid-row: 2;
+    grid-row: span 3;
+    align-self: center;
+}
+
+.formulario button {
+    grid-row: 5;
+    align-self: center;
+}
+
+
+
+
+
+
 
 h1{
     font-size: 2.5em;
