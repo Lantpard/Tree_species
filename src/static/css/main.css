@@ -1,29 +1,238 @@
+* {
+  margin: 0;
+  padding: 0;  
+}
+
 body{
     background-color: #154335fb;
-}
-h1{
     color: #fff;
-    font-size: 2.5em;
     font-family: 'Roboto', sans-serif;
+}
+
+/*estilos index*/
+
+.contenedor {
+    width: 90%;
+    max-width: 1000px;
+    height: 100%;
+    margin: 10px auto;
+    display:grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(2,auto);
+}
+
+.contenedor header {
+    height: 150px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor main {
+    height: 400px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
+
+.contenido {    
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    gap: 1em;
+}    
+
+.contenido > div{
+    padding: 1em;
+}
+
+.widget1 {
+    align-self: center;
+    text-align: center;
+}
+
+.widget2 {
+    align-self: center;
+    text-align: center;
+}
+
+.widget3 {
+    align-self: center;
+    text-align: center;
+}
+
+.widget4 {
+    align-self: center;
+    text-align: center;
+}
+
+.widget5 {
+    align-self: center;
+    text-align: center;
+}
+
+/*estilos about*/
+.contenedor2 {
+    width: 90%;
+    max-width: 1000px;
+    height: 50%;
+    margin: 10px auto;
+    display:grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,auto);
+}
+
+.contenedor2 header {
+    height: 150px;
+    grid-column: span 3;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor2 .descripcion {
+    height: 150px;
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.correlation {
+    grid-column: 5;
+    grid-row: 2;
+    align-self: center;
+    text-align: center;
+}
+
+.mintic {
+    grid-column: 5;
+    grid-row: 3;
+    align-self: center;
+    text-align: center;
+}
+
+/*estilos app*/
+
+.contenedor3 {
+    width: 90%;
+    height: 50%;
+    margin: 20px auto;
+    display:grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(5,auto);
+}
+
+.contenedor3 header {
+    height: 100px;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contenedor3 .filtros {
+
+    grid-column: span 3;
+    grid-row: span 3;
+}
+
+.map {
+    grid-column: 5;
+    grid-row: span 4;
+    align-self: center;
+    text-align: center;
+}
+
+.dash1 {
+    grid-column: 7;
+    grid-row: 2 ;
+    grid-row: span 2;
+    align-self: center;
+    text-align: center;
+}
+
+.dash2 {
+    grid-column: 7;
+    grid-row: 5;
+    grid-row: span 2;
+    align-self: center;
+    text-align: center;
+}
+
+.filtros {
+    display:grid;
+    grid-template-rows: repeat(7,1fr);
+}    
+
+.filtros > div{
+    padding: 1em;
+}
+
+.label1 {
+    grid-row: 1;
+    align-self: center;
+    text-align: center;
+}
+
+.label2 {
+    grid-row: 2;
+    align-self: center;
+    text-align: center;
+}
+
+.select1 {
+    grid-row: 3;
+    align-self: center;
+    text-align: center;
+}
+
+.label3 {
+    grid-row: 4;
+    align-self: center;
+}
+
+.select2 {
+    grid-row: 5;
+    align-self: center;
+    text-align: center;
+}
+
+.select3 {
+    grid-row: 6;
+    align-self: center;
+    text-align: center;
+}
+
+.select4 {
+    grid-row: 7;
+    align-self: center;
+    text-align: center;
+}
+
+/**/
+
+h1{
+    font-size: 2.5em;
     font-weight: 150;
 }
 
 h2{
-    color: #fff;
     font-size: 1.5em;
-    font-family: 'Roboto', sans-serif;
     font-weight: 150;
 }
 
 h3{
-    color: #fff;
     font-size: 1.2em;
-    font-family: 'Roboto', sans-serif;
     font-weight: 150;
 }
 
 p{
-    color: #fff;
     font-size: 1em;
 }
 

@@ -22,56 +22,47 @@
         </style>
 </head>
 <body>
-    <div class="container col-12">
-        <br>
-        <br>
-        <div class="row text-center">
+    <div class="contenedor">
+        <header>
             <h1>Especies Arboreas de Ibague</h1>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="row">
-            <div class="col-1">
-    
-            </div>
-            <div class="col-2 text-center mx-2">
-                <a href="{{url_for('about')}}">
+        </header>
+        <main class="contenido">
+            <div class="widget1">
+                <a href="{{url_for('about')}}" class="textblanco">
                     <img class="center blanco" src="static/images/info.png" height="100" >
                     <br>
                     <h3>Acerca de</h3>
                 </a>
             </div>
-            <div class="col-2 text-center mx-2">
-                <a href="{{url_for('dash')}}">
+            <div class="widget2">
+                <a href="{{url_for('dash')}}" class="textblanco">
                     <img class="center blanco" src="static/images/app.png" height="100" >
                     <br>
                     <h3>Monitoreo</h3>
                 </a>
             </div>
-            <div class="col-2 text-center mx-2">
-                <a href="{{url_for('trees')}}">
+            <div class="widget3">
+                <a href="{{url_for('trees')}}" class="textblanco">
                     <img class="center blanco" src="static/images/arbol2.png" height="120" >
                     <br>
                     <h3>Árboles en Ibagué</h3>
                 </a>
             </div>
-            <div class="col-2 text-center mx-2">
-                <a href="{{url_for('team')}}">
+            <div class="widget4">
+                <a href="{{url_for('team')}}" class="textblanco">
                     <img class="center blanco" src="static/images/equipo.png" height="100" >
                     <br>
                     <h3>Equipo</h3>
                 </a>
             </div>
-            <div class="col-2 text-center mx-2">
-                <a href="{{url_for('contact')}}">
+            <div class="widget5">
+                <a href="{{url_for('contact')}}" class="textblanco">
                     <img class="center blanco" src="static/images/mail.png" height="100" >
                     <br>
                     <h3>Contáctanos</h3>
                 </a>
             </div>
-        </div>
+        </main>
     </div>
 </body>
 </html>
