@@ -13,6 +13,7 @@
 
 {% extends "layout.html"%}
 {% block content %}
+
 <div class="contenedor3">
     <header>
         <h1>Monitoreo Especies</h1>
@@ -64,9 +65,18 @@
             </div>
         </div>
         
-        
+        {{super()}}
         <div class="map">
-            <img class="center" src="static/images/mapibague.png">
+            <div class="card">
+                <div class="card-body">
+                    <!---{% include "map.html" %}
+                    <img class="center" src="static/images/mapibague.png">--->
+                    {{ folium_map | safe }}
+                </div>
+              </div>
+
+            
+            
         </div>
         
             <div class="dash1">
@@ -79,5 +89,6 @@
         
        
 </div>
+
 {% endblock %}
 </html>

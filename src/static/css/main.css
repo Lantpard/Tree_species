@@ -413,7 +413,22 @@ body{
 
 /*otros estilos*/
 
+.card-body {
+    background-color: black;
+    border-color: black;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
+.card {
+    background-color: black;
+    border-color: black;
+    border-radius: 20px;
+    width: 500px; 
+    height: 330px"
+}
 
 
 
