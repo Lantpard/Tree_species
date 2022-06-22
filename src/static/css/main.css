@@ -122,7 +122,7 @@ body{
     margin: 20px auto;
     display:grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(7,1fr);
+    grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(5,auto);
 }
 
@@ -137,15 +137,17 @@ body{
 }
 
 .contenedor3 .filtros {
-    grid-column: 1/4;
+    grid-column: 1/2;
     grid-row: 2/6;
 }
 
 .map {
-    grid-column: 5;
-    grid-row: 3/5;
+    grid-column: 3/7;
+    grid-row: 2/6;
     align-self: center;
     text-align: center;
+    width: 1000px;
+    height: auto;
 }
 
 .dash1 {
@@ -426,8 +428,8 @@ body{
     background-color: black;
     border-color: black;
     border-radius: 20px;
-    width: 500px; 
-    height: 330px"
+    width: 700px; 
+    height: auto"
 }
 
 
