@@ -1,3 +1,6 @@
+from crypt import methods
+from doctest import OutputChecker
+from tkinter.tix import Form
 from flask import Flask, render_template, request
 import folium
 app = Flask(__name__)
@@ -14,11 +17,15 @@ def about():
 def trees():
     return render_template('trees.html')
 
+@app.route('/estado')
+def estado():
+    return render_template('estado.html')
+
 @app.route('/app')
 def dash():
     star_coords = (4.430081,-75.2112492)
 
-    folium_map = folium.Map(location=star_coords, zoom_start=13)
+    folium_map = folium.Map(location=star_coords, zoom_start=13, tiles ='Stamen Terrain')
     #folium_map.save('src/templates/map.html')
     #html_string=folium_map.get_root().render()
     folium.Marker(

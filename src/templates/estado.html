@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>Tree Species</title>
+    <style>
+    body
+        {
+        background-image: url("static/images/ocobos.jpeg");
+        background-size: cover;
+        background-blend-mode: soft-light;
+        background-position: center;
+        }
+    </style>
+</head>
+
+
+{% extends "layout.html"%}
+{% block content %}
+    <div class="contenedor7">
+        <header>
+            <h1>Cual es el estado de mi especie?</h1>
+        </header>
+        
+        <div class="descripcion2">
+            <h3>Seleccione las caracteristicas de su especie</h3>
+        </div>
+        
+
+        <div class="formulario2">
+
+            <div class="select1">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Arborización</option>
+                    <option value="1">Mantenimiento</option>
+                    <option value="2">Siembra</option>
+                </select>
+            </div>
+
+            <div class="select2">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Comuna</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="select3">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Especie (Nombre Comun)</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="select4">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Estado Sanitario</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+                  
+            <button type="button" class="btn btn-light btn-outline-primary">Estado</button> 
+            <button type="submit" class="btn btn-light btn-outline-success button2">Reestablecer</button>
+            
+        </div>
+          
+    </div>
+{% endblock %}
+</html>
