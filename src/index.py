@@ -3,6 +3,8 @@ from doctest import OutputChecker
 from tkinter.tix import Form
 from flask import Flask, render_template, request
 import folium
+from static.models.map import mapl
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -23,18 +25,8 @@ def estado():
 
 @app.route('/app')
 def dash():
-    star_coords = (4.430081,-75.2112492)
-
-    folium_map = folium.Map(location=star_coords, zoom_start=13, tiles ='Stamen Terrain')
-    #folium_map.save('src/templates/map.html')
-    #html_string=folium_map.get_root().render()
-    folium.Marker(
-      location=[4.430081,-75.2112492],
-      popup="leo",
-   ).add_to(folium_map)
-    html_string = folium_map._repr_html_()
+    html_string = mapl()._repr_html_()
     return render_template('app.html',folium_map=html_string)
-
 
 @app.route('/contact')
 def contact():
