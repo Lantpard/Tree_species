@@ -1,0 +1,95 @@
+<html>
+<head>
+    <title>Tree Species</title>
+    <style>
+    body
+        {
+        background-image: url("static/images/monitoreo.webp");
+        background-size: cover;
+        background-blend-mode: soft-light;
+        background-position: center;
+        }
+    </style>
+</head>
+
+{% extends "layout.html"%}
+{% block content %}
+
+<div class="contenedor3">
+    <header>
+        <h1>Monitoreo Especies</h1>
+    </header>
+
+   
+        <div class="filtros">
+            <div class="label1">
+                <h2>¿Como Funciona?</h2>
+            </div>
+            <div class="label2">
+                <h2>¿Que desea ver?</h2>
+            </div>
+            
+            <div class="select1">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Arborización</option>
+                    <option value="1">Mantenimiento</option>
+                    <option value="2">Siembra</option>
+                </select>
+            </div>
+            <div class="label3">
+                <h2>Filtrar por:</h2>
+            </div>
+            
+            <div class="select2">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Comuna</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                </select>
+            </div>
+            <div class="select3">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Especie (Nombre Comun)</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+            <div class="select4">
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Estado Sanitario</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                </select>
+            </div>
+        </div>
+        
+        {{super()}}
+        <div class="map">
+            <div class="card">
+                <div class="card-body">
+                    <!---{% include "map.html" %}
+                    <img class="center" src="static/images/mapibague.png">--->
+                    {{ folium_map2 | safe }}
+                </div>
+              </div>
+
+            
+        <!---   
+        </div>
+        
+            <div class="dash1">
+                <img class="container-img" src="static/images/bar1.png">
+            </div>
+       
+            <div class="dash2">
+                <img class="container-img" src="static/images/bar2.png">
+            </div>
+        --->
+       
+</div>
+
+{% endblock %}
+</html>

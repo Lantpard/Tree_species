@@ -5,44 +5,106 @@ import numpy as np
 import pandas as pd
 from static.sampledf.model import df_comunas,df_ibague
 from branca.element import Template, MacroElement
-import random
+from folium.plugins import MarkerCluster
 
 
 def mapl():
 
   data = df_comunas
 
-  for x in data.index:
-    color = np.random.randint(16, 256, size=3)
-    color = [str(hex(i))[2:] for i in color]
-    color = '#'+''.join(color).upper()
-    data.at[x, 'color'] = color
-
-  def style(feature):
-    return {
-            'fillColor': feature['properties']['color'],
-            'color': feature['properties']['color'],
-            'weight': 0.4
-            }
   star_coords = (4.430081,-75.2112492)
 
   folium_map = folium.Map(location=star_coords, zoom_start=13, tiles ='Stamen Terrain')
 
-  #for _, r in data.iterrows():  
-  #  folium.GeoJson(data=data, style_function=style).add_to(folium_map)
+  #arboles
+  #geometrias
+  #COMUNA 1
+  data1=data[data['COMUNAS']=="COMUNA 1"]
+  for _, r in data1.iterrows():
+      sim_geo = gpd.GeoSeries(r['geometry']).simplify(tolerance=0.001)
+      geo_j = sim_geo.to_json()
+      geo_j = folium.GeoJson(data=geo_j, style_function = lambda x:{'fillColor': 'green','color':'black','weight':0.5, 'fillOpacity': 0.4})
+      folium.Popup(r['COMUNAS']).add_to(geo_j)
+      geo_j.add_to(folium_map)
 
-  """"aca"""
-  #folium.GeoJson(data=data, style_function=style).add_to(folium_map)----'rgba(5, 5, 5, 0)',
-
-  for _, r in data.iterrows():
+  #COMUNA 2
+  data1=data[data['COMUNAS']=="COMUNA 2"]
+  for _, r in data1.iterrows():
     sim_geo = gpd.GeoSeries(r['geometry']).simplify(tolerance=0.001)
     geo_j = sim_geo.to_json()
-    geo_j = folium.GeoJson(data=geo_j, style_function = lambda x:{'fillColor': "Cyan",'color':'black','weight':0.5})
+    geo_j = folium.GeoJson(data=geo_j, style_function = lambda x:{'fillColor': "red",'color':'black','weight':0.5, 'fillOpacity': 0.4})
     folium.Popup(r['COMUNAS']).add_to(geo_j)
     geo_j.add_to(folium_map)
 
+  #COMUNA 3
+  data1=data[data['COMUNAS']=="COMUNA 3"]
+  for _, r in data1.iterrows():
+    sim_geo = gpd.GeoSeries(r['geometry']).simplify(tolerance=0.001)
+    geo_j = sim_geo.to_json()
+    geo_j = folium.GeoJson(data=geo_j, style_function = lambda x:{'fillColor': "blue",'color':'black','weight':0.5, 'fillOpacity': 0.4})
+    folium.Popup(r['COMUNAS']).add_to(geo_j)
+    geo_j.add_to(folium_map)
+
+  #COMUNA 4
+  data1=data[data['COMUNAS']=="COMUNA 4"]
+  for _, r in data1.iterrows():
+    sim_geo = gpd.GeoSeries(r['geometry']).simplify(tolerance=0.001)
+    geo_j = sim_geo.to_json()
+    geo_j = folium.GeoJson(data=geo_j, style_function = lambda x:{'fillColor': "yellow",'color':'black','weight':0.5, 'fillOpacity': 0.4})
+    folium.Popup(r['COMUNAS']).add_to(geo_j)
+    geo_j.add_to(folium_map)
+
+  #COMUNA 5
+  data1=data[data['COMUNAS']=="COMUNA 5"]
+  for _, r in data1.iterrows():
+    sim_geo = gpd.GeoSeries(r['geometry']).simplify(tolerance=0.001)
+    geo_j = sim_geo.to_json()
+    geo_j = folium.GeoJson(data=geo_j, style_function = lambda x:{'fillColor': "orange",'color':'black','weight':0.5,'fillOpacity': 0.4})
+    folium.Popup(r['COMUNAS']).add_to(geo_j)
+    geo_j.add_to(folium_map)
+  
+  #COMUNA 6
+  data1=data[data['COMUNAS']=="COMUNA 6"]
+  for _, r in data1.iterrows():
+    sim_geo = gpd.GeoSeries(r['geometry']).simplify(tolerance=0.001)
+    geo_j = sim_geo.to_json()
+    geo_j = folium.GeoJson(data=geo_j, style_function = lambda x:{'fillColor': "violet",'color':'black','weight':0.5,'fillOpacity': 0.4})
+    folium.Popup(r['COMUNAS']).add_to(geo_j)
+    geo_j.add_to(folium_map)
+
+  #capa Arbolado
+  #COMUNA 1
+  df1=df_ibague[df_ibague['comuna']==1]
+  for i in range(len(df1)):
+    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color= ('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
+  
+  #COMUNA 2
+  df1=df_ibague[df_ibague['comuna']==2]
+  for i in range(len(df1)):
+    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color= ('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
+
+  #COMUNA 3
+  df1=df_ibague[df_ibague['comuna']==3]
+  for i in range(len(df1)):
+    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color= ('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
+  
+  #COMUNA 4
+  df1=df_ibague[df_ibague['comuna']==4]
+  for i in range(len(df1)):
+    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color= ('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
+  
+  #COMUNA 5
+  df1=df_ibague[df_ibague['comuna']==5]
+  for i in range(len(df1)):
+    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color= ('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
+  
+  #COMUNA 6
+  df1=df_ibague[df_ibague['comuna']==6]
+  for i in range(len(df1)):
+    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color= ('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
+
+  #centroide
   data['Center_point'] = data['geometry'].centroid
-  #Extract lat and lon from the centerpoint
   data["lat"] = data.Center_point.map(lambda p: p.x)
   data["long"] = data.Center_point.map(lambda p: p.y)
 
@@ -51,64 +113,6 @@ def mapl():
     lon = r["long"]
     folium.Marker(location=[lon,lat], popup=r['COMUNAS'],icon=folium.Icon(color='lightblue',icon="home")).add_to(folium_map)
 
-  
-  #folium.GeoJson(data=data, style_function=lambda x:{'color':"orange",'weight':0.3}).add_to(folium_map)
-
-    #arboles
-  df1=df_ibague[df_ibague['comuna']==1]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color= ('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-  
-  df1=df_ibague[df_ibague['comuna']==2]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-
-  df1=df_ibague[df_ibague['comuna']==3]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-
-  df1=df_ibague[df_ibague['comuna']==4]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-  
-
-  df1=df_ibague[df_ibague['comuna']==5]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-    
-  df1=df_ibague[df_ibague['comuna']==6]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-  
-  df1=df_ibague[df_ibague['comuna']==7]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-
-  df1=df_ibague[df_ibague['comuna']==8]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-
-  df1=df_ibague[df_ibague['comuna']==9]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-  
-
-  df1=df_ibague[df_ibague['comuna']==10]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-
-  df1=df_ibague[df_ibague['comuna']==11]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-      
-  df1=df_ibague[df_ibague['comuna']==12]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-    
-  df1=df_ibague[df_ibague['comuna']==13]
-  for i in range(len(df1)):
-    folium.Circle(location=[df1['latitude'].iloc[i],df1['longitude'].iloc[i]],radius=2,color=('red' if (df1['estado_sanitario'].iloc[i]=="Muerto") else ( 'orange' if (df1['estado_sanitario'].iloc[i]=="Critico") else ( 'yelow' if (df1['estado_sanitario'].iloc[i]=="Enfermo") else "green")))).add_to(folium_map)
-     
   template = """
   {% macro html(this, kwargs) %}
 

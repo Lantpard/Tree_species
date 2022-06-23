@@ -4,6 +4,7 @@ from tkinter.tix import Form
 from flask import Flask, render_template, request
 import folium
 from static.models.map import mapl
+from static.models.mapCluster import mapl2
 
 app = Flask(__name__)
 
@@ -27,6 +28,11 @@ def estado():
 def dash():
     html_string = mapl()._repr_html_()
     return render_template('app.html',folium_map=html_string)
+
+@app.route('/app2')
+def dash1():
+    html_string = mapl2()._repr_html_()
+    return render_template('app2.html',folium_map2=html_string)
 
 @app.route('/contact')
 def contact():
