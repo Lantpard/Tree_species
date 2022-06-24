@@ -1,4 +1,4 @@
-from crypt import methods
+#from crypt import methods
 from doctest import OutputChecker
 from tkinter.tix import Form
 from flask import Flask, render_template, request
