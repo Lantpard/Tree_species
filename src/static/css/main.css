@@ -455,10 +455,6 @@ body{
     justify-content: center;
 }
 
-.contenedor7 h1 {
-    text-decoration: solid;
-}
-
 .descripcion2 {
     grid-column: 1/4;
     grid-row: 2;
@@ -468,116 +464,206 @@ body{
 .formulario2 {
     grid-column: 1/9;
     grid-row: 3/5;
-    border-radius: 20px;
-    background-color: rgba(43, 139, 83, 0.39);
-    margin: 10px;
-    padding: 10px;
-    align-content: center;
-    justify-content: center;
 }
 
 .formulario2 {
     display:grid;
-    grid-template-columns: repeat(9,1fr);
-    grid-template-rows: repeat(20,40px);
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,auto);
 }    
 
 .formulario2 > div{
     padding: 1em;
 }
 
-.formulario2 .i1 {
+.caracteristicas {
+   background-color: rgb(47, 186, 186);
+   border-radius: 20px;
+   display:grid;
+   grid-row: 1/2;
+   grid-column: 1/2;
+   grid-template-columns: repeat(1,1fr);
+   grid-template-rows: repeat(5,auto);
+   padding: 10px;
+   margin: 20px;
+   
+}  
+
+.caracteristicas .c1 {
     grid-row: 1;
-    grid-column: 1;
 }
 
-.formulario2 .i2 {
-    grid-row: 1;
-    grid-column: 3;
-}
-
-.formulario2 .i3 {
-    grid-row: 1;
-    grid-column: 5;
-}
-
-.formulario2 .i4 {
-    grid-row: 1;
-    grid-column: 7;
-}
-
-.formulario2 .i5 {
-    grid-row: 1;
-    grid-column: 9;
-}
-
-.formulario2 .i6 {
-    grid-row: 3;
-    grid-column: 1;
-}
-
-.formulario2 .i7 {
-    grid-row: 3;
-    grid-column: 3;
-}
-
-.formulario2 .i8 {
-    grid-row: 3;
-    grid-column: 5;
-}
-
-.formulario2 .i9 {
-    grid-row: 3;
-    grid-column: 7;
-}
-
-
-.formulario2 .c1 {
-    grid-row: 5;
-    grid-column: 1;
+.caracteristicas .c2 {
+    grid-row: 2;
     height: 30px;
-    width: 150px;
 }
 
-.formulario2 .c2 {
-    grid-row: 5;
-    grid-column: 3;
+.caracteristicas .c3 {
+    grid-row: 3;
     height: 30px;
-    width: 150px;
 }
 
+.caracteristicas .c4 {
+    grid-row: 4;
+}
 
-.formulario2 .select1 {
-    grid-row: 7;
+.caracteristicas .c5 {
+    grid-row: 5;
+}
+
+.presencias {
+    background-color: rgb(94, 177, 61);
+    border-radius: 20px;
+    display:grid;
+    grid-row: 3/4;
     grid-column: 1/2;
-    align-self: center;
-    text-align: center;
+    grid-template-columns: repeat(1,auto);
+    grid-template-rows: repeat(8,auto);
+    padding: 10px;
+    margin: 20px;
+ }  
+ 
+ .presencias .p1 {
+     grid-row: 1;
+ }
+ 
+ .presencias .p2 {
+    grid-row: 2;
 }
 
-.formulario2 .select2 {
-    grid-row: 7;
-    grid-column: 3/4;
-    align-self: center;
-    text-align: center;
+.presencias .p3 {
+    grid-row: 3;
 }
 
-.formulario2 .select3 {
+.presencias .p4 {
+    grid-row: 4;
+}
+
+.presencias .p5 {
+    grid-row: 5;
+}
+
+.presencias .p6 {
+    grid-row: 6;
+}
+
+.presencias .p7 {
     grid-row: 7;
+}
+
+.presencias .p8 {
+    grid-row: 8;
+}
+
+
+.conflictos {
+    background-color: rgb(139, 47, 141);
+    border-radius: 20px;
+    display:grid;
+    grid-row: 1;
+    grid-column: 3;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(10,auto);
+    padding: 10px;
+    margin: 20px;
+ }  
+ 
+.conflictos .con1 {
+     grid-row: 1;
+}
+
+ .conflictos .con2 {
+    grid-row: 2;
+}
+
+.conflictos .con3 {
+    grid-row: 3;
+}
+.conflictos .con4 {
+    grid-row: 4;
+}
+.conflictos .con5 {
+    grid-row: 5;
+}
+.conflictos .con6 {
+    grid-row: 6;
+}
+.conflictos .con7 {
+    grid-row: 7;
+}
+.conflictos .con8 {
+    grid-row: 8;
+}
+.conflictos .con9 {
+    grid-row: 9;
+}
+.conflictos .con10 {
+    grid-row: 10;
+}
+
+
+.riesgos {
+    background-color: rgb(186, 20, 48);
+    border-radius: 20px;
+    display:grid;
+    grid-row: 3;
+    grid-column: 3;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(4,auto);
+    padding: 10px;
+    margin: 20px;
+ }  
+ 
+.riesgos .r1 {
+     grid-row: 1;
+}
+
+.riesgos .r2 {
+    grid-row: 2;
+}
+
+.riesgos .r3 {
+    grid-row: 3;
+}
+
+.riesgos .r4 {
+    grid-row: 4;
+}
+
+
+.selectores {
+    background-color: rgb(61, 114, 94);
+    border-radius: 20px;
+    display:grid;
+    grid-row: 1/5;
     grid-column: 5/6;
-    align-self: center;
-    text-align: center;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(7,auto);
+    padding: 10px;
+    margin: 20px;
+ }  
+ 
+.familia {
+     grid-row: 1;
 }
 
-.formulario2 .select4 {
-    grid-row: 7;
-    grid-column: 7/8;
-    align-self: center;
-    text-align: center;
+.densidad {
+    grid-row: 3;
 }
+
+.comuna {
+    grid-row: 5;
+}
+
+.emplazamiento {
+    grid-row: 7;
+}
+
+
 
 
 .formulario2 button {
-    grid-row: 10;
+    grid-row: 5;
     grid-column: 1;
     align-self: start;
     width: 100px;
@@ -586,7 +672,7 @@ body{
 }
 
 .formulario2 .button2 {
-    grid-row: 10;
+    grid-row: 5;
     grid-column: 2;
     align-self: start;
     width: 120px;

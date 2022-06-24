@@ -26,67 +26,107 @@
         
 
         <div class="formulario2">
-            
-            
-            <label class="i1"><input  type="checkbox" id="cbox1" value="first_checkbox">Raices Descubiertas?</label>
-            <label class="i2"><input  type="checkbox" id="cbox1" value="first_checkbox">Bifurcacion Basal?</label>
-            <label class="i3"><input  type="checkbox" id="cbox1" value="first_checkbox">Presencia Insectos?</label>
-            <label class="i4"><input  type="checkbox" id="cbox1" value="first_checkbox">Presencia Hongos?</label>
-            <label class="i5"><input  type="checkbox" id="cbox1" value="first_checkbox">Presencia Agallas?</label>
-            <label class="i6"><input  type="checkbox" id="cbox1" value="first_checkbox">Pudricion Localizada?</label>
-            <label class="i7"><input  type="checkbox" id="cbox1" value="first_checkbox">presencia epifitas?</label>
-            <label class="i8"><input  type="checkbox" id="cbox1" value="first_checkbox">Presencia especies parasitas?</label>
-            <label class="i9"><input  type="checkbox" id="cbox1" value="first_checkbox">Presencia Otros Objetos?</label>
-            
-            <input type="number" class="c1" placeholder="Altura Fuste" >
-
-            <input type="number" class="c2" placeholder="Diametro Normal">
-
-
-
-            <div class="select1">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Familia</option>
-                    <option value="1">Adoxaceae</option>
-                    <option value="2">Amaranthaceae</option>
-                    <option value="3">Anacardiaceae</option>
-                    <option value="4">Annonaceae</option>
-                    <option value="5">Apocynaceae</option>
-                    <option value="6">Araliaceae</option>
-                    <option value="7">Araucariaceae</option>
-                    <option value="8">Arecaceae</option>
-                    <option value="9">Asparagaceae</option>
-                    <option value="10">Asteraceae</option>
-                    <option value="11">Basellaceae</option>
-                </select>
+            <div class="caracteristicas">
+                <label class="c1">Caracteristicas fisicas:</label>  
+                <input type="number" class="c2" placeholder="Altura Fuste" >
+                <input type="number" class="c3" placeholder="Diametro Normal">
+                <label class="c4"><input class="mx-2"  type="checkbox" id="cbox1" value="first_checkbox">Raices Descubiertas</label>
+                <label class="c5"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Bifurcacion Basal</label>
             </div>
 
-            <div class="select2">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Densidad Follaje</option>
-                    <option value="1">Denso</option>
-                    <option value="2">Medio</option>
-                    <option value="3">Ralo</option>
-                </select>
+
+
+            <div class="presencias">
+                <label class="p1">Presencia plagas:</label>
+                <label class="p2"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Insectos</label>
+                <label class="p3"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Hongos</label>
+                <label class="p4"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Agallas</label>
+                <label class="p5"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Pudricion Localizada</label>
+                <label class="p6"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Epifitas</label>
+                <label class="p7"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Especies Parasitas</label>
+                <label class="p8"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Otros Objetos</label>
             </div>
-            <div class="select3">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Especie (Nombre Comun)</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+
+            <div class="conflictos">
+                <label class="con1">Conflictos:</label>
+                <label class="con2"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Redes Electricas</label>
+                <label class="con3"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Redes Hidraulicas</label>
+                <label class="con4"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Redes Alcantarillado</label>
+                <label class="con5"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Otros Arboles</label>
+                <label class="con6"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Estructuras</label>
+                <label class="con7"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Infraestructura Vial</label>
+                <label class="con8"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Redes telefonicas</label>
+                <label class="con9"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Redes Gas</label>
+                <label class="con10"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Alumbrado Publico</label>
             </div>
-            <div class="select4">
-                <select class="form-select" aria-label="Default select example">
-                    <option selected>Estado Sanitario</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                    <option value="3">Three</option>
-                </select>
+
+            <div class="riesgos">
+                <label class="r1">Riesgos:</label>
+                <label class="r2"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Volcamiento</label>
+                <label class="r3"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Caida Ramas</label>
+                <label class="r4"><input  class="mx-2" type="checkbox" id="cbox1" value="first_checkbox">Caida Elementos</label>
+            </div>
+
+            <div class="selectores">
+                <div class="familia">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Familia</option>
+                        <option value="1">Adoxaceae</option>
+                        <option value="2">Amaranthaceae</option>
+                        <option value="3">Anacardiaceae</option>
+                        <option value="4">Annonaceae</option>
+                        <option value="5">Apocynaceae</option>
+                        <option value="6">Araliaceae</option>
+                        <option value="7">Araucariaceae</option>
+                        <option value="8">Arecaceae</option>
+                        <option value="9">Asparagaceae</option>
+                        <option value="10">Asteraceae</option>
+                        <option value="11">Basellaceae</option>
+                    </select>
+                </div>
+
+                <div class="densidad">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Densidad Follaje</option>
+                        <option value="1">Denso</option>
+                        <option value="2">Medio</option>
+                        <option value="3">Ralo</option>
+                    </select>
+                </div>
+
+                <div class="comuna">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Comuna</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                    </select>
+                </div>
+                <div class="emplazamiento">
+                    <select class="form-select" aria-label="Default select example">
+                        <option selected>Emplazamiento fisico</option>
+                        <option value="1">Alcorque</option>
+                        <option value="2">Anden</option>
+                        <option value="3">Antejardin</option>
+                        <option value="4">Glorieta</option>
+                        <option value="5">Parque</option>
+                        <option value="6">Separador_vial</option>
+                        <option value="7">Zona_blanda</option>
+                    </select>
+                </div>
             </div>
                   
-            <button type="button" class="btn btn-light btn-outline-primary">Estado</button> 
+            <button type="button" class="btn btn-light btn-outline-primary">Modelar</button> 
             <button type="submit" class="btn btn-light btn-outline-success button2">Reestablecer</button>
             
         </div>
